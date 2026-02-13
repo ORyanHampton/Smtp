@@ -19,7 +19,7 @@ public struct SmtpServerConfiguration {
     public init(hostname: String = "",
                 port: Int = 465,
                 signInMethod: SignInMethod = .anonymous,
-                authMethod: AuthType = .oAuth,
+                authMethod: AuthType = .login,
                 secure: SmtpSecureChannel = .none,
                 connectTimeout: TimeAmount = TimeAmount.seconds(10),
                 helloMethod: HelloMethod = .helo

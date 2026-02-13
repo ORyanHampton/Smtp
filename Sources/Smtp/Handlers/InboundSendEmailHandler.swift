@@ -93,7 +93,6 @@ internal final class InboundSendEmailHandler: ChannelInboundHandler {
                     self.currentlyWaitingFor = .okAfterAuthBegin
                 }
             }
-
         case .okAfterStartTls:
             self.send(context: context, command: .sayHelloAfterTls(serverName: self.serverConfiguration.hostname, helloMethod:  self.serverConfiguration.helloMethod))
             self.currentlyWaitingFor = .okAfterStartTlsHello
